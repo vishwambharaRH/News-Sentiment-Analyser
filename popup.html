@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Analyzer</title>
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Webpage Analyzer</h1>
+
+        <!-- API Key Input Section -->
+        <div class="api-key-section">
+            <label for="apiKeyInput">OpenRouter API Key:</label>
+            <input type="password" id="apiKeyInput" placeholder="Enter your OpenRouter API key">
+            <button id="saveApiKeyButton" class="button save-button">
+                Save API Key
+            </button>
+            <p id="apiKeyStatus" class="api-key-status"></p>
+        </div>
+
+        <!-- Buttons to trigger analysis -->
+        <div class="button-group">
+            <button id="analyzeSentimentButton" class="button analyze-button">
+                Analyze Sentiment
+            </button>
+            <button id="analyzeLeaningButton" class="button analyze-button">
+                Analyze News Leaning
+            </button>
+        </div>
+
+
+        <!-- Loading indicator -->
+        <div id="loadingIndicator" class="loading-indicator hidden">
+            <div class="spinner"></div>
+            <p>Analyzing...</p>
+        </div>
+
+        <!-- Result display areas -->
+        <div id="resultsContainer" class="results-container">
+            <div class="result-section">
+                <p class="result-label">Sentiment:</p>
+                <p id="sentimentResult" class="analysis-result"></p>
+            </div>
+            <div class="result-section">
+                <p class="result-label">News Leaning:</p>
+                <p id="leaningResult" class="analysis-result"></p>
+            </div>
+            <p id="errorMessage" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Link to popup.js for functionality -->
+    <script src="popup.js"></script>
+</body>
+</html>

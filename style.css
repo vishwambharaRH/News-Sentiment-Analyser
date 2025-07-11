@@ -1,0 +1,215 @@
+/* style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    width: 340px; /* Slightly wider for better spacing */
+    padding: 1.5rem; /* Increased padding around the body */
+    background-color: #f0f4f8; /* Light background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure it takes full height for centering */
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Slightly wider max-width */
+    background-color: #ffffff; /* White background */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    padding: 2rem; /* Increased padding inside the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Consistent spacing between main sections */
+}
+
+h1 {
+    font-size: 1.75rem; /* Slightly larger heading */
+    font-weight: 700; /* font-bold */
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 0.5rem; /* Reduced bottom margin as gap handles spacing */
+    text-align: center;
+}
+
+.api-key-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Spacing within API key section */
+}
+
+.api-key-section label {
+    display: block;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    color: #374151; /* text-gray-700 */
+}
+
+.api-key-section input[type="password"] {
+    width: 100%;
+    padding: 0.625rem 0.75rem; /* Slightly more vertical padding */
+    border: 1px solid #d1d5db; /* border border-gray-300 */
+    border-radius: 0.375rem; /* rounded-md */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+    outline: none; /* focus:outline-none */
+    font-size: 0.875rem; /* sm:text-sm */
+}
+
+.api-key-section input[type="password"]:focus {
+    border-color: #3b82f6; /* focus:border-blue-500 */
+    box-shadow: 0 0 0 1px #3b82f6, 0 0 0 3px rgba(59, 130, 246, 0.5); /* focus:ring-blue-500 focus:ring-opacity-75 */
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.75rem; /* Space between buttons */
+    width: 100%;
+}
+
+.button {
+    width: 100%;
+    font-weight: 600; /* font-semibold */
+    padding: 0.75rem 1.5rem; /* py-3 px-6 for analyze, py-2 px-4 for save */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    transition: all 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+    transform: scale(1); /* Initial transform for hover effect */
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff; /* text-white */
+}
+
+.button:hover {
+    transform: scale(1.03); /* Slightly less aggressive hover scale */
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.75); /* focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 */
+}
+
+.analyze-button {
+    background-color: #2563eb; /* bg-blue-600 */
+}
+
+.analyze-button:hover {
+    background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+
+.save-button {
+    margin-top: 0.5rem; /* mt-2 */
+    background-color: #10b981; /* bg-green-600 */
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+}
+
+.save-button:hover {
+    background-color: #059669; /* hover:bg-green-700 */
+}
+
+.save-button:focus {
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.75); /* focus:ring-2 focus:ring-green-500 focus:ring-opacity-75 */
+}
+
+.api-key-status {
+    font-size: 0.75rem; /* text-xs */
+    margin-top: 0.25rem; /* mt-1 */
+    color: #6b7280; /* text-gray-500 */
+    text-align: center;
+}
+
+.loading-indicator {
+    margin-top: 0.5rem; /* Adjusted margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Spacing between spinner and text */
+}
+
+.loading-indicator.hidden {
+    display: none;
+}
+
+.spinner {
+    border: 0.25rem solid rgba(59, 130, 246, 0.2); /* border-b-2 border-blue-500 */
+    border-top: 0.25rem solid #3b82f6;
+    border-radius: 50%;
+    width: 2rem; /* h-8 w-8 */
+    height: 2rem;
+    animation: spin 1s linear infinite; /* animate-spin */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-indicator p {
+    color: #4b5563; /* text-gray-600 */
+}
+
+.results-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between result sections */
+    margin-top: 0.5rem; /* Adjusted margin */
+}
+
+.result-section {
+    background-color: #f9fafb; /* Light gray background for sections */
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem; /* Slightly more horizontal padding */
+    border: 1px solid #e5e7eb;
+    text-align: center; /* Center text within each section */
+}
+
+.result-label {
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+    color: #4b5563; /* text-gray-600 */
+    margin-bottom: 0.25rem;
+}
+
+.analysis-result {
+    font-size: 1.35rem; /* Slightly larger result text */
+    font-weight: 600; /* font-semibold */
+    color: #374151; /* text-gray-700 */
+    min-height: 1.75rem; /* Ensure consistent height even when empty */
+    display: flex; /* Use flex to center content vertically */
+    align-items: center;
+    justify-content: center;
+}
+
+.error-message {
+    color: #dc2626; /* text-red-600 */
+    margin-top: 1rem; /* Increased margin for error message */
+    font-size: 0.875rem; /* text-sm */
+    text-align: center;
+}
+
+/* Utility classes for dynamic color changes in JS */
+.text-green {
+    color: #22c55e; /* green-500 */
+}
+
+.text-red {
+    color: #ef4444; /* red-500 */
+}
+
+.text-blue { /* New class for Left-leaning */
+    color: #3b82f6; /* blue-500 */
+}
+
+.text-gray {
+    color: #6b7280; /* gray-500 */
+}
+
+/* Hide utility */
+.hidden {
+    display: none !important;
+}
