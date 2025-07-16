@@ -11,7 +11,7 @@ A more permanent setup will be created for permanent API key storage, or till yo
 
 ## How to Use
 To use the extension, `git pull` this repository onto your system.
-Open your Chromium browser, go to chrome://extensions and enable developer mode (for now).
+Open your Chromium browser, go to [Extensions](chrome://extensions) and enable developer mode (for now).
 Click 'Load Unpacked' and select this folder.
 Ensure all service workers are working properly.
 Create your own account on OpenRouter and get an API key that you can insert into the extension.
