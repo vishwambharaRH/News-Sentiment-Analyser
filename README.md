@@ -1,6 +1,6 @@
 # News Sentiment Analyzer
 ## Introduction
-This extension uses a call to a free model (here deepseek/deepseek-r1-0528-qwen3-8b:free) on OpenRouter to show the webpage leaning and sentiment.
+This extension uses a call to a free model (here `deepseek/deepseek-r1-0528-qwen3-8b:free`) on OpenRouter to show the webpage leaning and sentiment.
 Sentiment varies at times, however on the tested webpages, the general public perception of the website held.
 A few sites that were tested include Fox News, NBC, CNN and BBC.
 
